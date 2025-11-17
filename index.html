@@ -1,0 +1,215 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Operation Lock - Site Oficial</title>
+<style>
+    body {
+        margin: 0;
+        background: #05060a;
+        font-family: Arial, sans-serif;
+        color: white;
+        overflow-x: hidden;
+    }
+    /* Fundo animado */
+    #bg-anim {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, #0a0f1d, #000000);
+        z-index: -2;
+        animation: pulse 6s infinite alternate;
+    }
+    @keyframes pulse {
+        0% { filter: brightness(0.8); }
+        100% { filter: brightness(1.1); }
+    }/* Partículas */
+#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Header */
+header {
+    background: rgba(10, 10, 15, 0.8);
+    backdrop-filter: blur(6px);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    letter-spacing: 2px;
+    color: #4ac3ff;
+    text-shadow: 0 0 12px #1fb4ff;
+}
+
+/* Ícone menu */
+.menu-btn {
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Menu lateral */
+#side-menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background: #0f1118;
+    box-shadow: -5px 0 15px #000;
+    transition: 0.3s;
+    padding: 20px;
+}
+#side-menu a {
+    display: block;
+    color: #4ac3ff;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+#side-menu.open {
+    right: 0;
+}
+
+/* Sessões */
+section {
+    padding: 80px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    border-left: 6px solid #009dff;
+    padding-left: 10px;
+}
+
+.team {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.member {
+    background: #141418;
+    width: 180px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #009dff55;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    margin-top: 60px;
+    background: #0f0f12;
+    color: #888;
+    font-size: 0.9em;
+}
+
+</style>
+</head>
+<body>
+<div id="bg-anim"></div>
+<canvas id="particles"></canvas><header>
+    <nav style="width:100%; display:flex; justify-content:space-between; align-items:center;">
+        <h1>OPERATION LOCK</h1>
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    </nav>
+</header><div id="side-menu">
+    <a href="#menu">Menu Principal</a>
+    <a href="#codigos">Códigos Atuais</a>
+    <a href="#equipe">Desenvolvedores</a>
+    <a href="#criacao">Como Funciona a Criação</a>
+</div><section id="menu">
+    <h3>Menu Principal</h3>
+    <p>Bem-vindo ao site oficial de <strong>Operation Lock</strong>, um projeto inspirado no universo de Blue Lock e criado para entregar uma experiência dinâmica, competitiva e inovadora aos jogadores de Roblox. Nossa missão é desenvolver um jogo que una intensidade, estratégia, evolução individual e partidas emocionantes.</p>
+    <p>O projeto está sendo produzido com foco em mecânicas fluidas, animações de alta qualidade, sistemas de progressão e fidelidade ao estilo único de Blue Lock. Tudo é testado, otimizado e atualizado continuamente para garantir que o jogador sinta a verdadeira pressão de ser o melhor em campo.</p>
+</section><section id="codigos">
+    <h3>Códigos Atuais</h3>
+    <p>No momento, nenhum código está disponível. Assim que o jogo entrar nas fases avançadas de testes e lançamentos parciais, códigos serão divulgados aqui e no Discord oficial para recompensas e itens exclusivos.</p>
+    <p>Fique atento às atualizações — novos códigos podem surgir a qualquer instante.</p>
+</section><section id="equipe">
+    <h3>Desenvolvedores</h3>
+    <p>A equipe responsável por Operation Lock trabalha em conjunto para transformar ideias em sistemas completos, polidos e funcionais. Cada membro contribui com suas habilidades para entregar um projeto de alta qualidade.</p>
+    <div class="team">
+        <div class="member">Kel</div>
+        <div class="member">Dbzz</div>
+        <div class="member">Oliver</div>
+        <div class="member">Kah</div>
+    </div>
+    <p>O time trabalha diariamente em melhorias, testes internos, animações, efeitos visuais e balanceamento de gameplay para garantir uma experiência marcante desde o primeiro lançamento.</p>
+</section><section id="criacao">
+    <h3>Como Funciona a Criação</h3>
+    <p>O desenvolvimento de Operation Lock segue um processo profissional dividido em etapas organizadas.</p>
+    <ul>
+        <li><strong>Planejamento:</strong> definição de mecânicas, sistemas, interface e identidade visual.</li>
+        <li><strong>Prototipagem:</strong> criação e teste de versões simples de cada mecânica para validar funcionalidades.</li>
+        <li><strong>Animações e Visual:</strong> implementação de animações fluidas e efeitos que dão vida ao jogo.</li>
+        <li><strong>Programação:</strong> construção dos sistemas de movimento, chutes, física, habilidades e interface.</li>
+        <li><strong>Otimização:</strong> ajustes de performance para garantir jogabilidade suave em qualquer dispositivo.</li>
+        <li><strong>Testes Internos:</strong> toda atualização passa por testes antes de ser enviada ao público.</li>
+    </ul>
+    <p>O objetivo é entregar algo que se destaque dentro da plataforma, com qualidade acima da média e uma comunidade ativa acompanhando cada avanço.</p>
+</section><section id="contato">
+    <h3>Contato</h3>
+    <p>Discord oficial do projeto:</p>
+    <p><strong>https://discord.gg/wTFSnYfxt</strong></p>
+</section><footer>
+    © Operation Lock • Kel • Dbzz • Oliver • Kah
+</footer><script>
+// Menu lateral
+function toggleMenu() {
+    document.getElementById("side-menu").classList.toggle("open");
+}
+
+// Fechar clicando fora do menu
+window.addEventListener('click', function(e) {
+    const menu = document.getElementById('side-menu');
+    const btn = document.querySelector('.menu-btn');
+    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+        menu.classList.remove('open');
+    }
+});
+
+// Sistema de partículas simples
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+let particles = [];
+canvas.width = innerWidth;
+canvas.height = innerHeight;
+
+for (let i = 0; i < 70; i++) {
+    particles.push({ x: Math.random()*innerWidth, y: Math.random()*innerHeight, r: Math.random()*2+1, s: Math.random()*1+0.2 });
+}
+
+function anim() {
+    ctx.clearRect(0,0,innerWidth,innerHeight);
+    particles.forEach(p => {
+        ctx.fillStyle = "#4ac3ff55";
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
+        ctx.fill();
+        p.y += p.s;
+        if (p.y > innerHeight) p.y = 0;
+    });
+    requestAnimationFrame(anim);
+}
+anim();
+</script></body>
+</html>
